@@ -1,6 +1,5 @@
 ## Spring MVC
-- I changed the default server port to 8090 in application.properties
-
+I changed the default server port to 8090 in application.properties
 
 
 Day 1 Session 1
