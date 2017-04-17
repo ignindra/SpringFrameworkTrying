@@ -32,6 +32,7 @@ public class EmployeeController {
 	
 	@RequestMapping(value="/employees", method=RequestMethod.POST)
 	public Employee makeEmployee(@RequestBody(required=true) Employee employee) {
+		this.employees.add(employee);
 		return employee;
 	}
 }
