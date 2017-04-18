@@ -24,4 +24,10 @@ public class EmployeeTest {
         	.content(pattern).contentType(MediaType.APPLICATION_JSON))
             .andExpect(MockMvcResultMatchers.content().json(pattern));
     }
+    
+    @Test
+    public void getSpecific() throws Exception {
+        this.mockMvc.perform(MockMvcRequestBuilders.get("/employees/U004"))
+            .andExpect(MockMvcResultMatchers.status().isNotFound());
+    }
 }

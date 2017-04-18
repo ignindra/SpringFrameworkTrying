@@ -9,3 +9,7 @@ Day 1 Session 1
 Day 1 Session 2
 - Branch = master
 - File = EmployeeController.java
+
+Day 2 Session 1
+- Branch = master
+- File = EmployeeController.java (added getSpecificEmployee method) & EmployeeTest.java (added getSpecific test method)
