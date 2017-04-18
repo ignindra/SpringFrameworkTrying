@@ -1,42 +1,32 @@
 package com.example;
 
+import java.sql.Date;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "employee")
 public class Employee {
-	private String id;
-	private String name;
+	@Id
+	@Column(name = "emp_id")
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long empId;
+	@Column(name = "first_name", nullable = false)
+	private String firstName;
+	@Column(name = "last_name", nullable = false)
+	private String lastName;
+	@Column(name = "gender", nullable = false)
 	private String gender;
-	
-	public Employee() {
-		
-	}
-	
-	public Employee(String id, String name, String gender) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.gender = gender;
-	}
-	
-	public String getId() {
-		return id;
-	}
-	
-	public String getName() {
-		return name;
-	}
-
-	public String getGender() {
-		return gender;
-	}
-	
-	public void setId(String id) {
-		this.id = id;
-	}
-	
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public void setGender(String gender) {
-		this.gender = gender;
-	}
+	@Column(name = "dob")
+	private Date dob;
+	@OneToMany(mappedBy = "employee", cascade = CascadeType.ALL)
+	private Set<OfficeLocation> officeLocations;
 }
