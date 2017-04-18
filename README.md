@@ -13,3 +13,7 @@ Day 1 Session 2
 Day 2 Session 1
 - Branch = master
 - File = EmployeeController.java (added getSpecificEmployee method) & EmployeeTest.java (added getSpecific test method)
+
+Day 2 Session 2
+- Branch = jparest
+- created new project, JPAProject
